@@ -1,3 +1,351 @@
 * {
-color: SeaGreen;
+    /* color: SeaGreen; */
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    scroll-behavior: smooth;
+}
+
+.tst {
+    height: 200px;
+    width: 200px;
+    background-color: seagreen;
+    align-self: flex-end;
+    transition: width 1s;
+}
+
+.tst:hover {
+    width: 500px;
+}
+
+.flex-container, .landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-container {
+    position: relative;
+    top: 4rem;
+    justify-content: center;
+}
+
+.landing {
+    /* border: 0.5px solid black; */
+    min-height: calc(100vh - 9rem);
+}
+
+.main-picture-container {
+    overflow: hidden;
+    position: relative;
+    height: 456px;
+    width: 456px;
+    /* border: 0.5px solid black; */
+}
+
+#main-picture {
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    margin: 3px;
+}
+
+.main-picture-border {
+    position: absolute;
+}
+
+#main-picture-top-border {
+    border-top: 3px solid #9B35E8;
+    width: 0;
+    top: 0;
+    left: 3px;
+    transition: width 0.1s 0.3s linear;
+}
+
+.main-picture-container:hover > #main-picture-top-border {
+    width: 453px;
+    transition: width 0.5s linear;
+}
+
+#main-picture-right-border {
+    border-right: 3px solid #9B35E8;;
+    height: 0;
+    top: 3px;
+    right: 0;
+    transition: height 0.1s 0.2s linear;
+}
+
+.main-picture-container:hover > #main-picture-right-border {
+    height: 453px;
+    transition: height 0.5s 0.5s linear;
+}
+
+#main-picture-bottom-border {
+    border-bottom: 3px solid #9B35E8;;;
+    width: 0;
+    bottom: 0;
+    right: 3px;
+    transition: width 0.1s 0.1s linear;
+}
+
+.main-picture-container:hover > #main-picture-bottom-border {
+    width: 453px;
+    transition: width 0.5s 1s linear;
+}
+
+#main-picture-left-border {
+    border-left: 3px solid #9B35E8;;;
+    height: 0;
+    bottom: 3px;
+    left: 0;
+    transition: height 0.1s linear;
+}
+
+.main-picture-container:hover > #main-picture-left-border {
+    height: 453px;
+    transition: height 0.5s 1.5s linear;
+}
+
+.typewriter-container {
+    /* width: 11rem; */
+    width: 16rem;
+    /* border: 1px solid black; */
+    /* margin-top: -1rem; */
+    /* margin-bottom: -2rem; */
+    padding-left: 3rem;
+    /* border: 0.5px solid black; */
+}
+
+.guy-container, .pollack-container {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.pollack-container {
+    margin-left: -2rem;
+}
+
+.typewriter {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    width: 0;
+}
+
+.typewriter-underscore {
+    display: inline-block;
+    position: relative;
+    top: -0.375rem;
+    margin-left: -0.5rem;
+    overflow: hidden;
+    color: #9B35E8;
+    visibility: hidden;
+}
+
+#typewriter1 {
+    animation: typewriterReveal1 1.25s steps(4,end) 1.5s 1 normal forwards;
+}
+
+#typewriter-underscore1 {
+    animation: flashingUnderscore 0.6s step-end 0s 6 normal forwards;
+}
+
+#typewriter2 {
+    animation: typewriterReveal2 1.75s steps(7,start) 3.6s 1 normal forwards;
+}
+
+#typewriter-underscore2 {
+    animation: flashingUnderscore 0.6s step-end 4s 5 normal forwards;
+}
+
+.pollack-underline {
+    height: 0;
+    width: 0;
+    /* background-color: aqua; */
+    /* opacity: 0.5; */
+    border-bottom: 3px solid #9B35E8;
+    position: absolute;
+    display: inline-block;
+    margin-top: 2.75rem;
+    margin-left: -7.21rem;
+    transition: width 0.4s;
+    z-index: -1;
+    animation: postponeVisibility 7.8s step-end 0s 1 normal forwards;
+}
+
+#typewriter2:hover ~ .pollack-underline {
+    width: 6.2rem;
+}
+
+nav {
+    /* border: 1px solid black; */
+    width: 90%;
+    height: 2rem;
+    background-color: white;
+    opacity: 0.9;
+    position: fixed;
+    top: 1rem;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    visibility: hidden;
+    animation: postponeVisibility 0.1s 7s forwards;
+}
+
+nav>ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav>ul>li {
+    display: inline-block;
+}
+
+nav>ul>li:not(:last-child) {
+    opacity: 0;
+    margin-right: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.nav-about-me-container {
+    animation: fadeIn 2s 7.1s forwards;
+}
+
+.nav-skills-container {
+    animation: fadeIn 2s 8.1s forwards;
+}
+
+.nav-projects-container {
+    animation: fadeIn 2s 9.1s forwards;
+}
+
+.nav-contact-container {
+    animation: fadeIn 2s 10.1s forwards;
+}
+
+.nav-to-top-container {
+    visibility: hidden;
+}
+
+#nav-about-me-underline, #nav-skills-underline, #nav-projects-underline, #nav-contact-underline {
+    height: 0;
+    width: 0;
+    position: absolute;
+    border-bottom: 3px solid #9B35E8;
+    /* background-color: aqua;
+    opacity: 0.5; */
+    transition: width 0.4s;
+}
+
+.nav-about-me-container:hover > #nav-about-me-underline {
+    width: 4.8rem;
+}
+
+#nav-about-me-underline.scroll-in-section {
+    width: 4.8rem;
+}
+
+.nav-skills-container:hover > #nav-skills-underline {
+    width: 3.6rem;
+}
+
+#nav-skills-underline.scroll-in-section {
+    width: 3.6rem;
+}
+
+.nav-projects-container:hover > #nav-projects-underline {
+    width: 4.8rem;
+}
+
+#nav-projects-underline.scroll-in-section {
+    width: 4.8rem;
+}
+
+.nav-contact-container:hover > #nav-contact-underline {
+    width: 4.2rem;
+}
+
+#nav-contact-underline.scroll-in-section {
+    width: 4.2rem;
+}
+
+section {
+    height: 900px;
+    overflow: scroll;
+}
+
+.section-buffer {
+    height: 3rem;
+}
+
+@keyframes typewriterReveal1 {
+    from {
+        width: 0;
+    }
+    to {
+        /* width: 3.6rem; */
+        width: 4.8rem;
+    }
+}
+
+@keyframes typewriterReveal2 {
+    from {
+        width: 0;
+    }
+    to {
+        /* width: 6.3rem; */
+        width: 8.4rem;
+    }
+}
+
+@keyframes adjustMargin {
+    from {
+        margin-left: -1rem;
+    }
+    to {
+        margin-left: 0;
+    }
+}
+
+@keyframes flashingUnderscore {
+    from {
+        visibility: visible;
+    }
+    50% {
+        visibility: hidden;
+    }
+    to {
+        visibility: hidden;
+    }
+}
+
+@keyframes flashingMarker {
+    from, to {
+        border-right: 2.5px solid orange;
+    }
+    50% {
+        border-right: none;
+    }
+}
+
+@keyframes postponeVisibility {
+    from {
+        visibility: hidden;
+    }
+    to {
+        visibility: visible;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1
+    }
 }

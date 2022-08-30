@@ -2,10 +2,75 @@
 <head>
  <title>Guy Pollack</title>
  <link href="./index.css" type="text/css" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <script src="./main.js" defer></script>
 </head>
 <body>
-  <h1>Guy Pollack</h1>
+  <!--h1>Guy Pollack</h1>
   <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
+  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" /-->
+  <!--h2 id="typewriter"></h2-->
+  <nav class="nav-bar">
+    <ul>
+      <li class="nav-about-me-container">
+        <a href="#about-me">About Me</a>
+        <div id="nav-about-me-underline"></div>
+      </li>
+      <li class="nav-skills-container">
+        <a href="#skills">Skills</a>
+        <div id="nav-skills-underline"></div>
+      </li>
+      <li class="nav-projects-container">
+        <a href="#projects">Projects</a>
+        <div id="nav-projects-underline"></div>
+      </li>
+      <li class="nav-contact-container">
+        <a href="#contact">Contact</a>
+        <div id="nav-contact-underline"></div>
+      </li>
+      <li class="nav-to-top-container">
+        <a href="#" class="fa fa-caret-up"></a>
+      </li>
+    </ul>
+  </nav>
+  <div class="flex-container">
+    <div class="landing">
+      <div class="main-picture-container">
+        <img src="./resources/Guy Passport Black and White.jpeg" id="main-picture">
+        <div class="main-picture-border" id="main-picture-top-border"></div>
+        <div class="main-picture-border" id="main-picture-right-border"></div>
+        <div class="main-picture-border" id="main-picture-bottom-border"></div>
+        <div class="main-picture-border" id="main-picture-left-border"></div>
+      </div>
+      <div class="typewriter-container">
+        <div class="guy-container">
+          <h1 class="typewriter" id="typewriter1">Guy</h1>
+          <h1 class="typewriter-underscore" id="typewriter-underscore1">_</h1>
+        </div>
+        <div class="pollack-container">
+          <h1 class="typewriter" id="typewriter2">Pollack</h1>
+          <h1 class="typewriter-underscore" id="typewriter-underscore2">_</h1>
+          <!-- <div class="pollack-underline"></div> -->
+        </div>
+      </div>
+    </div>
+    <!-- <div class="tst"></div> -->
+    <section id="about-me">
+      <div class="section-buffer"></div>
+      <h2>About Me</h2>
+    </section>
+    <section id="skills">
+      <div class="section-buffer"></div>
+      <h2>Skills</h2>
+    </section>
+    <section id="projects">
+      <div class="section-buffer"></div>
+      <h2>Projects</h2>
+    </section>
+    <section id="contact">
+      <div class="section-buffer"></div>
+      <h2>Contact</h2>
+    </section>
+  </div>
 </body>
 </html>
